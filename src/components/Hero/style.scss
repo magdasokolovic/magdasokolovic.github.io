@@ -73,4 +73,50 @@
             height: 100%;
         }
     }
+
+
+}
+.hero-media {
+    position: relative;
+    height: 764px;
+}
+.hero-phone-block {
+    position: absolute;
+    width: 364px;
+    height: 650px;
+    top: 0;
+    left: 50%;
+    transform: translateX(-40%) scale(1.5);
+
+    .hero-phone-template {
+        background-image: url('../../assets/girl.png');
+        background-position: center;
+        background-size: 100%;
+        background-repeat: no-repeat;
+        width: 90%;
+        height: 100%;
+    }
+}
+
+.hero-usedBy {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 234px;
+    padding-top: 234px;
+    margin-bottom: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1304px;
+    width: calc(100% - 48px);
+    position: relative;
+    color: white;
+
+    .hero-usedBy-copyright {
+        margin-bottom: 0;
+        padding-left: 52px;
+        width: 390px;
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 1.4;
+    }
 }
