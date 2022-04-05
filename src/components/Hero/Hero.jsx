@@ -3,6 +3,7 @@ import HeroCollage from './HeroCollage';
 import HeroHeader from './HeroHeader';
 import HeroPhoneBlock from './HeroPhoneBlock';
 import HeroUsedBy from './HeroUsedBy';
+import HeroFooter from './HeroFooter';
 import './style.scss';
 
 export default function Hero() {

@@ -1,11 +1,10 @@
 import React from "react";
 import "../styles/home.scss";
+import Main from '../containers/Main'
 
 const Index = () => {
   return (
-    <div>
-      <h1>This is the starting project for Web Unlocked tutorials</h1>
-    </div>
+    <Main/>
   );
 };
 export default Index;
