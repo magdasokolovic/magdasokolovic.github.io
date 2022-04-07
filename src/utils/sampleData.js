@@ -28,14 +28,15 @@ export const featureSlides = [
     title: "Complete Controlls",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit necessitatibus quas dolore obcaecati aliquam et incidunt cum adipisci voluptate, commodi, culpa repudiandae nam animi! A esse perspiciatis quia maxime mollitia.",
-    imageUrl: girl,
+    imageUrl:
+      "https://images.unsplash.com/photo-1576827471288-0a8f6d6c937b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80",
   },
   {
     title: "On Brand",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit necessitatibus quas dolore obcaecati aliquam et incidunt cum adipisci voluptate, commodi, culpa repudiandae nam animi! A esse perspiciatis quia maxime mollitia.",
     imageUrl:
-      "https://images.unsplash.com/photo-1596432150438-3ef028cca147?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1867&q=80",
+      "https://images.unsplash.com/photo-1579105728744-9d6b14a45389?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=983&q=80",
   },
   {
     title: "Immersive",

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { featureSlides } from "../../../utils/sampleData";
 import cn from 'classnames'
+import FeatureSlide from "./FeatureSlide";
 
 function RenderImages({activeFeatureIndex}) {
     return featureSlides.map(({imageUrl}, index) => {
@@ -12,10 +13,21 @@ export default function FeatureSlides() {
 
   return (
     <div className="feature-slides-container">
-      <div className="feature-slides-left"></div>
+      <div className="feature-slides-left">
+        {featureSlides.map((feature, index) => (
+          <FeatureSlide
+            key={feature.imageUrl}
+            title={feature.title}
+            description={feature.description}
+            index={index}
+            updateActiveImage={setFeatureIndex}
+          />
+        ))}
+      </div>
 
-      <RenderImages activeFeatureIndex={activeFeatureIndex} />
-      <div className="feature-slides-right"></div>
+      <div className="feature-slides-right">
+        <RenderImages activeFeatureIndex={activeFeatureIndex} />
+      </div>
     </div>
   );
 }

@@ -3,6 +3,7 @@ import Hero from '../components/Hero/Hero'
 import {gsap} from "gsap";
 import {ScrollTrigger} from 'gsap/ScrollTrigger'
 import FeatureSlides from "../components/Hero/FeatureSlides";
+// import '../styles/home.scss';
 
 export default function Main() {
     const [loader, setLoader] = useState(true);
