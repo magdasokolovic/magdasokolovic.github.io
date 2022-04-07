@@ -3,6 +3,7 @@ import { featureSlides } from "../../../utils/sampleData";
 import cn from 'classnames'
 import FeatureSlide from "./FeatureSlide";
 import gsap from 'gsap'
+
 function RenderImages({activeFeatureIndex}) {
     return featureSlides.map(({imageUrl}, index) => (
         <img className={cn({'as-primary': activeFeatureIndex === index})} key={imageUrl} style={{backgroundImage: `url(${imageUrl})`}}  alt="" />

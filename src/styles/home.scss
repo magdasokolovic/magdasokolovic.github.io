@@ -1,9 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Antic&family=Lato:ital,wght@0,400;0,700;1,100;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,800;1,600;1,700;1,800&display=swap');
 
 // font-family: 'Antic', sans-serif;
-
+  // font-family: 'Lato', sans-serif;
 body {
-  color: black;
+  font-family: 'Antic', sans-serif;
 }
 
 .loader {
@@ -37,9 +37,6 @@ body {
     }
   }
 
-  // .feature-slides-left {
-
-  // }
 
   .feature-slides-right {
     height: 100vh;
