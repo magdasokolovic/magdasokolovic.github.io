@@ -24,6 +24,7 @@ export default function Main() {
     <div>
         <Hero/>
         <FeatureSlides/>
+        <div className="footer">Build your ideal story today</div>
     </div>
   )
 
