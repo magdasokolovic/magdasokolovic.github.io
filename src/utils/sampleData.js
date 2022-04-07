@@ -9,7 +9,7 @@ import backpack3 from "../assets/backpack-3.png";
 import backpack4 from "../assets/backpack-4.png";
 import backpack5 from "../assets/backpack-5.jpg";
 import backpack6 from "../assets/backpack-6.jpg";
-import girl from "../assets/girl.png"
+// import girl from "../assets/girl.png"
 
 export const photos = [
   backpack,

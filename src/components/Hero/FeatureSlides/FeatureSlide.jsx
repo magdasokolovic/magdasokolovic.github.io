@@ -10,8 +10,8 @@ export default function FeatureSlide({title, description, index, updateActiveIma
       if (onScreen) {
         updateActiveImage(index);
       }
-    }, [onScreen, index]);
-    
+    }, [onScreen, index, updateActiveImage]);
+
   return (
     <div ref={ref} className="feature-slide">
       <h3 className="feature-slide-title">{title}</h3>
