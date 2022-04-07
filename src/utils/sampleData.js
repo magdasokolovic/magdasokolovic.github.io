@@ -3,7 +3,7 @@
  * Here I would usually put all my assets 
  * for example: Links to images from unsplash
  */
-import backpack from "../assets/backpack-1.png";
+import backpack from "../assets/backpack-8.jpg";
 import backpack2 from "../assets/backpack-2.png";
 import backpack3 from "../assets/backpack-3.png";
 import backpack4 from "../assets/backpack-4.png";

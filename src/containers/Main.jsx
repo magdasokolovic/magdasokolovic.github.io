@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import Hero from '../components/Hero/Hero'
 import {gsap} from "gsap";
 import {ScrollTrigger} from 'gsap/ScrollTrigger'
+import FeatureSlides from "../components/Hero/FeatureSlides";
 
 export default function Main() {
     const [loader, setLoader] = useState(true);
@@ -21,6 +22,7 @@ export default function Main() {
   ) : (
     <div>
         <Hero/>
+        <FeatureSlides/>
     </div>
   )
 
