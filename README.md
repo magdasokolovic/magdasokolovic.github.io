@@ -1,7 +1,5 @@
-#This is the starting project for Web Unlocked tutorials
+> The will-change property:
 
-This project is bootstrapped by gatsby
+    The `will-change` CSS property hints to browsers how an element is expected to change. Browsers may set up optimizations before an element is actually changed. These kinds of optimizations can increase the responsiveness of a page by doing potentially expensive work before they are actually required.
 
-To run this started use
-`npm i` - to install dependencies
-`npm start` - to start local dev server
+#### [custom cursor: ](https://dev.to/holdmypotion/react-custom-cursor-no-extra-dependencies-25ki)

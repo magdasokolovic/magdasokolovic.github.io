@@ -6,17 +6,23 @@ import HeroUsedBy from './HeroUsedBy';
 import HeroFooter from './HeroFooter';
 import './style.scss';
 
-export default function Hero() {
+
+export default function Hero({onCursor}) {
   return (
-    <div className="hero-container">
-        <HeroHeader/>
+    <>
+      <div className="hero-container">
+        <HeroHeader />
         <div className="hero-media">
-            <HeroCollage/>
-            <HeroPhoneBlock/>
+          <HeroCollage 
+            onMouseEnter={() => onCursor('hovered')}
+            onMouseLeave={onCursor}
+          />
+          <HeroPhoneBlock />
         </div>
 
-        <HeroUsedBy/>
-        <HeroFooter/>
-    </div>
-  )
+        <HeroUsedBy />
+        <HeroFooter />
+      </div>
+    </>
+  );
 }

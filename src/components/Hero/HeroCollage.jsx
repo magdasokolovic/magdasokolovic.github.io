@@ -30,7 +30,9 @@ export default function HeroCollage() {
   }, [])
 
   return (
-    <div className="hero-collage">
+    <div
+      className="hero-collage"
+    >
       <div className="left-column">
         {leftImages.map((src, i) => (
           <ImageElement key={i} src={src} />
