@@ -18,5 +18,5 @@ module.exports = {
       },
     },
   ],
-  pathPrefix: `/scrolltriggerproject`,
+  // pathPrefix: `/scrolltriggerproject`,
 }
