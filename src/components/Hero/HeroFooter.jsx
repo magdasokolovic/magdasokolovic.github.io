@@ -3,7 +3,7 @@ import gsap from "gsap";
 
 export default function HeroFooter() {
   const ref = useRef(null)
-
+  //add animation to text
   useEffect(() => {
     const tl = gsap.timeline({
       scrollTrigger: {
@@ -16,7 +16,7 @@ export default function HeroFooter() {
   }, [])
   return (
     <div ref={ref} className="hero-text-section">
-      <h1 id='hero-text' className="hero-text-white">Stories meet their widest audience ever</h1>
+      <h1 id='hero-text' className="hero-text-colored">Stories meet their widest audience ever</h1>
     </div>
   )
 }
