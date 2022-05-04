@@ -19,5 +19,4 @@ module.exports = {
     },
     `gatsby-plugin-netlify`
   ],
-  // pathPrefix: `/scrolltriggerproject`,
 }
