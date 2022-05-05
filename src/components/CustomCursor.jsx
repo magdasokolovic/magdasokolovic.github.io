@@ -16,10 +16,13 @@ const CustomCursor = () => {
     }
 
     useEffect(()=> {
+      if (window !== "undefined") {
         document.addEventListener("mousemove", onMouseMove)
         return ()=>{
             document.removeEventListener("mousemove", onMouseMove)
         }
+      }
+        
     }, [])
   return (
     <>
