@@ -7,15 +7,13 @@ import HeroFooter from './HeroFooter';
 import './style.scss';
 
 
-export default function Hero({onCursor}) {
+export default function Hero() {
   return (
     <>
       <div className="hero-container">
         <HeroHeader />
         <div className="hero-media">
-          <HeroCollage 
-            onMouseEnter={() => onCursor('hovered')}
-            onMouseLeave={onCursor}
+          <HeroCollage
           />
           <HeroPhoneBlock />
         </div>

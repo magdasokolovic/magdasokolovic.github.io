@@ -5,9 +5,10 @@ export default function HeroHeader() {
 
   useEffect(() => {
     gsap.fromTo('#hero-text', 
-    {opacity: 0}, 
-    {opacity: 1, duration: 0.5, delay: 0.2})
+    {autoAlpha: 0}, 
+    {autoAlpha: 1, duration: 0.5})
   }, [])
+  
   return (
     <div className="hero-text-section">
       <h1 id="hero-text">Stories meet their widers adience</h1>

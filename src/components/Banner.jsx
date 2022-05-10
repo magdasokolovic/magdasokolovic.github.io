@@ -1,39 +1,74 @@
-import React, { useRef, useEffect } from 'react'
-import './Hero/style.scss'
+import gsap from "gsap/all";
+import React, { useRef, useEffect, useState } from "react";
+import useOnScreen from "../hooks/useOnScreen";
+import "./Hero/style.scss";
 
-const Banner = ({setBannerElements}) => {
-    const websites = useRef(null);
-    const apps = useRef(null)
-    const branding = useRef(null)
+const Banner = () => {
+  const websites = useRef(null);
+  const apps = useRef(null);
+  const branding = useRef(null);
+  const bannerRef = useRef(null);
+  const onScreen = useOnScreen(bannerRef);
+  const [reveal, setReveal] = useState(false)
 
-    useEffect(() => {
-        let elements = {
-            websites: websites,
-            apps: apps,
-            branding: branding
-        };
-        setBannerElements(elements)
-    }, [setBannerElements])
+  useEffect(() => {
+    if (onScreen) setReveal(onScreen)
+    
+  }, [onScreen]);
+
+  useEffect(() =>{
+    if (reveal) {
+      const tl = gsap.timeline({delay: .2})
+      tl.from(".banner-item", {
+        duration: 1.5,
+        y: '-50px',
+        opacity: 0,
+        ease: "power4.out",
+        delay: 1,
+        stagger: 0.2,
+        skewY: 10
+      })
+      .from(".main-body-inner", {
+        duration: .8, 
+        ease: "power3.easeOut",
+        y: "100px",
+        opacity: 0,
+        skewX: 10
+      }, "1.5")
+    }
+  }, [reveal])
+
   return (
-    <div className="banner-container">
-         <div className="banner-inner">
-             <div className="banner-title">
-                 <h2>We make it happen</h2>
-             </div>
-             <div className="banner-items-container">
-                 <div className="banner-item">
-                     <h1 ref={websites}>Websites</h1>
-                 </div>
-                 <div className="banner-item">
-                     <h1 ref={apps}>Apps</h1>
-                 </div> 
-                 <div className="banner-item">
-                     <h1 ref={branding}>Branding</h1>
-                 </div>
-             </div>
-         </div>
-    </div>
-  )
-}
+    <>
+      <div className="banner-container" ref={bannerRef}>
+        <div className="banner-inner">
+          <div className="banner-title">
+            <h2>We make it happen</h2>
+          </div>
+          <div className="banner-items-container">
+            <div className="banner-item">
+              <h1 ref={websites}>Websites</h1>
+            </div>
+            <div className="banner-item">
+              <h1 ref={apps}>Apps</h1>
+            </div>
+            <div className="banner-item">
+              <h1 ref={branding}>Branding</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="main-body">
+        <div className="main-body-inner">
+          <p>
+            Leading digital agency with solid design and development expertise.
+            We build readymade websites, mobile applications, and elaborate
+            online business services.
+          </p>
+        </div>
+      </div>
+    </>
+  );
+};
 
-export default Banner
+export default Banner;
