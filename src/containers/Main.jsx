@@ -3,13 +3,16 @@ import Hero from '../components/Hero/Hero'
 import {gsap} from "gsap";
 import {ScrollTrigger} from 'gsap/ScrollTrigger'
 import FeatureSlides from "../components/Hero/FeatureSlides";
-import useMousePosition from '../hooks/useMousePosition'
+// import useMousePosition from '../hooks/useMousePosition'
+// import useMousePosition from '../hooks/useMousePosition'
 import Banner from '../components/Banner'
 import Loader from "../components/Loader";
+import BigText from "../components/BigText/BigText";
+import Cursor from '../components/Cursor'
 
 
 export default function Main() {
-  const [bannerElements, setBannerElements] = useState({})
+  const [cursorHovered, setCursorHovered] = useState(false)
   const [loader, setLoader] = useState(true);
 
     useEffect(() => {
@@ -26,10 +29,12 @@ export default function Main() {
       <Loader />
     ) : (
       <div>
+        <Cursor cursorHovered={cursorHovered}/>
         <Hero />
         <FeatureSlides />
         <div className="footer">Build your ideal story today</div>
-        <Banner setBannerElements={setBannerElements} />
+        <Banner setCursorHovered={setCursorHovered}/>
+        <BigText/>
       </div>
     );
 }

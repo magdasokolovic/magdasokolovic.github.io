@@ -6,7 +6,7 @@ export default function HeroHeader() {
   useEffect(() => {
     gsap.fromTo('#hero-text', 
     {autoAlpha: 0}, 
-    {autoAlpha: 1, duration: 0.5})
+    {autoAlpha: 1, duration: 0.5, ease: "power3.in"})
   }, [])
   
   return (
