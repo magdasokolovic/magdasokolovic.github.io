@@ -3,7 +3,7 @@ import React, { useRef, useEffect, useState } from "react";
 import useOnScreen from "../hooks/useOnScreen";
 import "./Hero/style.scss";
 
-const Banner = () => {
+const Banner = ({setCursorHovered}) => {
   const websites = useRef(null);
   const apps = useRef(null);
   const branding = useRef(null);
@@ -26,14 +26,14 @@ const Banner = () => {
         ease: "power4.out",
         delay: 1,
         stagger: 0.2,
-        skewY: 10
+        skewY: 5
       })
       .from(".main-body-inner", {
         duration: .8, 
         ease: "power3.easeOut",
         y: "100px",
         opacity: 0,
-        skewX: 10
+        skewX: 5
       }, "1.5")
     }
   }, [reveal])
@@ -47,13 +47,13 @@ const Banner = () => {
           </div>
           <div className="banner-items-container">
             <div className="banner-item">
-              <h1 ref={websites}>Websites</h1>
+              <h1 onMouseEnter={()=>setCursorHovered(true)} onMouseLeave={()=>setCursorHovered(false)} ref={websites}>Websites</h1>
             </div>
             <div className="banner-item">
-              <h1 ref={apps}>Apps</h1>
+              <h1 onMouseEnter={()=>setCursorHovered(true)} onMouseLeave={()=>setCursorHovered(false)} ref={apps}>Apps</h1>
             </div>
             <div className="banner-item">
-              <h1 ref={branding}>Branding</h1>
+              <h1 onMouseEnter={()=>setCursorHovered(true)} onMouseLeave={()=>setCursorHovered(false)} ref={branding}>Branding</h1>
             </div>
           </div>
         </div>
