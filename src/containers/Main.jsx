@@ -5,10 +5,10 @@ import {ScrollTrigger} from 'gsap/ScrollTrigger'
 import FeatureSlides from "../components/Hero/FeatureSlides";
 // import useMousePosition from '../hooks/useMousePosition'
 // import useMousePosition from '../hooks/useMousePosition'
-import Banner from '../components/Banner'
-import Loader from "../components/Loader";
+import Banner from '../components/Banner/Banner'
+import Loader from "../components/Loader/Loader";
 import BigText from "../components/BigText/BigText";
-import Cursor from '../components/Cursor'
+import Cursor from '../components/Cursor/Cursor'
 
 
 export default function Main() {

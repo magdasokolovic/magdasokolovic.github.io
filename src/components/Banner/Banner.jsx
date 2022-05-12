@@ -1,7 +1,7 @@
 import gsap from "gsap/all";
 import React, { useRef, useEffect, useState } from "react";
-import useOnScreen from "../hooks/useOnScreen";
-import "./Hero/style.scss";
+import useOnScreen from "../../hooks/useOnScreen";
+import "./Banner.scss";
 
 const Banner = ({setCursorHovered}) => {
   const websites = useRef(null);

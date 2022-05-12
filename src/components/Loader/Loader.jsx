@@ -1,7 +1,18 @@
 import React, {useEffect} from 'react'
 import {gsap} from 'gsap'
+import './loader.scss'
+import Lottie from "lottie-react";
+import animationData from '../../assets/41628-backpack.json'
 
 const Loader = () => {
+    const defaultOptions = {
+        loop: true,
+        autoplay: true,
+        animationData: animationData,
+        rendererSettings: {
+        preserveAspectRatio: "xMidYMid slice"
+        }
+    }
     useEffect(() => {
         gsap.from(".block", {
             duration: 0.8,
@@ -22,7 +33,10 @@ const Loader = () => {
       }, [])
   return (
     <div className="loader-container">
+        <div className="initial-loader">
         <div className="loader">Loading</div>
+        <Lottie options={defaultOptions} height={400} width={400}/>
+        </div>
         <div className="overlay">
             <div className="block block-1"></div>
             <div className="block block-2"></div>

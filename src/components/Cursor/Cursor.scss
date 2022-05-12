@@ -1,0 +1,31 @@
+
+
+.cursor-follower {
+    position: absolute;
+    background: url('../assets/sac_de_cours.svg') no-repeat 50% 50%;
+    background-size: cover;
+    top: 0;
+    left: 0;
+    width: 50px;
+    height: 50px;
+    // animation: animate-rotate 10s infinite linear;
+    z-index: 999;
+    user-select: none;
+    pointer-events: none;
+    opacity:.8;
+    overflow: hidden;
+    mix-blend-mode: difference;
+    transform: translate(5px, 5px);
+    //  transition: all .1s ease-in-out;
+    //  transition-property: width, height, border;
+    //  will-change: width, height,transform, border;
+  
+    @keyframes animate-rotate {
+      to {
+        transform: rotate(0deg)
+      }
+      from {
+        transform: rotate(360deg)
+      }
+    }
+  }
